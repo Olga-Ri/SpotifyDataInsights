@@ -4,17 +4,17 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from dotenv import load_dotenv
 import pandas as pd
 
-# Load environment variables (Optional if using .env)
+# get environment variables
 load_dotenv()
 
-# Spotify Credentials (Hardcoded for now)
+# Spotify Credentials 
 client_id = "612d9ac09f64466983707724a9d95da6"
 client_secret = "60804efb333d41beaf2c5effcbe44ef5"
 
 print("CLIENT ID:", client_id)
 print("CLIENT SECRET:", client_secret)
 
-# Authenticate with Spotify
+# Authenticate w/ Spotify
 auth_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(auth_manager=auth_manager)
 
